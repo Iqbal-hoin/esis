@@ -1,0 +1,246 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --navy: #112d4e;
+    --orange: #e05236;
+    --light-bg: #f9f7f1;
+    --white: #ffffff;
+    --text-dark: #333333;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+/* Header & Nav */
+header {
+    background: var(--navy);
+    color: var(--white);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo h1 {
+    color: var(--orange);
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.logo p {
+    font-size: 11px;
+    color: #cbd5e1;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 5px 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--orange);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(17, 45, 78, 0.85), rgba(17, 45, 78, 0.85)), url('https://unsplash.com') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding-top: 80px;
+}
+
+.hero-content h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.btn {
+    background: var(--orange);
+    color: var(--white);
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #c23b22;
+}
+
+/* Section Common Title */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    position: relative;
+    color: var(--navy);
+}
+
+.section-title::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: var(--orange);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* About Section */
+.about {
+    background: var(--white);
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    font-size: 17px;
+}
+
+.sister-concern {
+    margin-top: 30px;
+    background: var(--light-bg);
+    padding: 20px;
+    border-left: 5px solid var(--orange);
+    display: inline-block;
+}
+
+/* Services Section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+    color: var(--navy);
+    margin-bottom: 15px;
+}
+
+/* Team Section */
+.team {
+    background: var(--white);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.team-member {
+    background: var(--light-bg);
+    padding: 20px;
+    border-top: 4px solid var(--navy);
+    border-radius: 4px;
+    text-align: center;
+}
+
+.team-member h4 {
+    color: var(--navy);
+    font-size: 18px;
+}
+
+.team-member .role {
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.team-member .details {
+    font-size: 13px;
+    color: #666;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+/* Mobile Responsiveness */
+@media(max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .nav-links {
+        margin-top: 15px;
+    }
+    .hero-content h2 {
+        font-size: 30px;
+    }
+}
